@@ -1,0 +1,27 @@
+.parent {
+	background-color: #bad;
+	color: #fff;
+	height: 200px;
+	width: 350px;
+	position: relative;
+	@include addPrefix(box-shadow, 5px 0 5px #111, webkit);
+	@include addPrefix(animation, keyframe 2s infinite linear, webkit moz);
+}
+.parent::after {
+	@include overlay;
+	content: "";
+	background-color: rgba($redColor, 0.5);
+}
+
+@include animate(keyframe) {
+	0% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+
