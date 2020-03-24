@@ -1,14 +1,12 @@
-// Import Helpers ()
+// Import Helpers
 @import "sass/helpers/_variables.scss";
 @import "sass/helpers/_mixins.scss";
 @import "sass/layout/_grid.scss";
+@import "sass/components/_head_with_border.scss";
+@import "sass/components/_buttons.scss";
 
-// Import Layout & pages 
+// Import Layout & pages
 @import "sass/pages/_global_page.scss";
 @import "sass/layout/_header.scss";
 @import "sass/pages/_home_page.scss";
 @import "sass/layout/_footer.scss";
-
-
-
-
