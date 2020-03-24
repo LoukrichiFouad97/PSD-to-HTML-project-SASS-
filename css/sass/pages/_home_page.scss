@@ -1,27 +1,54 @@
-.parent {
-	background-color: #bad;
-	color: #fff;
-	height: 200px;
-	width: 350px;
-	position: relative;
-	@include addPrefix(box-shadow, 5px 0 5px #111, webkit);
-	@include addPrefix(animation, keyframe 2s infinite linear, webkit moz);
+body {
+	height: 4000px;
 }
-.parent::after {
-	@include overlay;
-	content: "";
-	background-color: rgba($redColor, 0.5);
-}
+// Slider Starts Here
+.slider {
+	blockquote {
+		width: 80%;
+		font-size: 1.2rem;
+		line-height: 1.7;
+		font-style: italic;
+		text-align: center;
+		font-weight: bold;
+		margin: 2rem auto;
+	}
+	.sliders {
+		position: relative;
+		height: 500px;
+		border: 1px solid firebrick;
+		img {
+			@include overlay;
+			max-width: 100%;
+			opacity: 0;
+			@include addPrefix(transition, .5s ease, webkit moz);
+			&.active {
+				opacity: 1;
+			}
+		}
 
-@include animate(keyframe) {
-	0% {
-		opacity: 0.5;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0.5;
+		.slider-bullets {
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			z-index: 10;
+			li {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background-color: inherit;
+				border-radius: 50%;
+				border: 2px solid #f4f4f4;
+				cursor: pointer;
+				&:hover,
+				&.active {
+					border-color: $redColor;
+					background-color: $redColor;
+				}
+
+			}
+
+		}
+
 	}
 }
-
