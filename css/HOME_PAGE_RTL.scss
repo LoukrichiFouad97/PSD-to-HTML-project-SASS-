@@ -1,2 +1,94 @@
-$float-left: left;
-$float-right: right;
+@import "sass/helpers/_variables.scss";
+
+$float-left: right;
+$float-right: left;
+
+.main-header {
+	.logo {
+		@media #{$minMedium} {
+			float: $float-left;
+			text-align: $text-left;
+		}
+	}
+
+	.navbar {
+		@media #{$minMedium} {
+			float: $float-left;
+		}
+		li {
+			float: $float-left;
+	}
+
+}
+
+
+// Services Starts here
+.services {
+	.service {
+		@media #{$minMedium} {
+			float: $float-left;
+		}
+	}
+}
+// Services End Here
+
+// Our Players Starts here
+.players {
+	.player {
+		@media #{$minSmall} {
+			float: $float-left;
+		}
+
+	}
+}
+// Our Players End Here
+
+// Lorem Ipsum Starts here
+.lorem-ipsum {
+	.lorem-box {
+		@media #{$minMedium} {
+			float: $float-left;
+		}
+	}
+}
+// Lorem Ipsum Ends here
+
+.footer {
+	.gallery,
+	.info,
+	.contact {
+		float: $float-left;
+	}
+
+		.img-box {
+			img {
+        
+				@media #{$minSmall} {
+					float: $float-left;
+				}
+
+			}
+			.img-text {
+				@media #{$minSmall} {
+					float: $float-left;
+				}
+			}
+		}
+	}
+
+
+
+	.copyright {
+		.text,
+		.author {
+			@media #{$minMedium} {
+			float: $float-left;
+			}
+		}
+		.author {
+			@media #{$minMedium} {
+				text-align: $text-right;
+			}
+		}
+	}
+}

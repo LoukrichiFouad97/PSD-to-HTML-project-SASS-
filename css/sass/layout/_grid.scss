@@ -10,10 +10,27 @@
 }
 
 .container {
-	width: 1200px;
 	margin: auto;
 	padding-left: 15px;
 	padding-right: 15px;
+
+	@media #{$minSmall} {
+		width: 750px;
+	}
+
+	@media #{$minMedium} {
+		width: 970px;
+	}
+
+	@media #{$minLarge} {
+		width: 1170px;
+	}
+}
+
+.text-center-xs {
+	@media #{$maxMobile} {
+		text-align: center;
+	}
 }
 
 // clear floats

@@ -1,6 +1,3 @@
-body {
-	height: 4000px;
-}
 // Slider Starts Here
 .slider {
 	blockquote {
@@ -54,11 +51,26 @@ body {
 // Services Starts here
 .services {
 	.service {
-		padding: 1rem 0;
-		float: $float-left;
-		width: (100% / 3);
-		&:not(:last-of-type) {
-			padding-right: 1rem;
+		margin-bottom: 1.5rem;
+		@media #{$maxMobile} {
+			display: block;
+			margin-bottom: 0;
+			float: none;
+			width: 100%;
+			padding: 1rem 0;
+			i {
+				display: block;
+				margin-bottom: 1rem;
+			}
+		}
+		@media #{$minMedium} {
+			margin-bottom: 0;
+			padding: 1rem 0;
+			float: $float-left;
+			width: (100% / 3);
+			&:not(:last-of-type) {
+				padding-right: 1rem;
+			}
 		}
 		.service__title {
 			color: #666;
@@ -82,14 +94,30 @@ body {
 // Our Players Starts here
 .players {
 	.player {
-		float: $float-left;
-		width: (100% / 5);
-		padding-right: 1rem;
+		@media #{$minSmall} {
+			float: $float-left;
+			width: (100% / 2);
+			padding-right: 5px;
+			padding-left: 5px;
+			margin-bottom: 2rem;
+		}
+		@media #{$minMedium} {
+			width: (100% / 3);
+		}
+		@media #{$minLarge} {
+			width: (100% / 5);
+		}
+		@media #{$maxMobile} {
+			display: block;
+			padding-right: 5px;
+			padding-left: 5px;
+			margin-bottom: 2rem;
+		}
 		.player__img {
-			width: 100%;
+			max-width: 100%;
 		}
 		.player__title {
-			margin-top: .5rem;
+			margin-top: 0.5rem;
 			color: #666;
 			font-weight: normal;
 			span {
@@ -108,17 +136,22 @@ body {
 }
 // Our Players End Here
 
-// Lorem Ipsum Starts here 
+// Lorem Ipsum Starts here
 .lorem-ipsum {
 	.lorem-box {
-		float: $float-left;
-		width: (94% / 3);
-		&:not(:last-of-type) {
-			margin-right: 3%;
+		display: block;
+		@media #{$minMedium} {
+			float: $float-left;
+			width: (94% / 3);
+			&:not(:last-of-type) {
+				margin-right: 3%;
+			}
 		}
 		img {
-			width: 100%;
+			display: block;
+			max-width: 100%;
+			margin: 10px auto;
 		}
 	}
 }
-// Lorem Ipsum Ends here 
+// Lorem Ipsum Ends here

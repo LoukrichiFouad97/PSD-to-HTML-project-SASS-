@@ -5,7 +5,6 @@ var sliderImages = Array.from(document.querySelectorAll(".slider img"));
 
 // Count the number of slides
 const numberOfSlides = sliderImages.length;
-
 var currentSlide = 1;
 
 // create the slider bullets container
@@ -69,3 +68,36 @@ function setActive() {
 
 setActive();
 /*********** Slider Ends here ****************/
+
+/*********** Hamberger Menu Starts Here *********/
+const hambergerMenu = document.getElementById("hamberger-menu");
+const navbar = document.getElementById("navbar");
+let menuStatus = false;
+let navHeight = navbar.clientHeight;
+
+hambergerMenu.addEventListener("click", function showAndHide() {
+	const dropDown = setInterval(() => {
+		if (!menuStatus) {
+			navHeight += 20;
+			Object.assign(navbar.style, {
+				display: "block",
+				height: navHeight + "px"
+			});
+			// Stop the height when reaching the max height of the nav menu
+			if (navHeight > 298) {
+				clearInterval(dropDown);
+				menuStatus = true;
+			}
+		} else {
+			navHeight -= 20;
+			navbar.style.height = navHeight + "px";
+			// Hide the menu 
+			if (navHeight < 2) {
+				clearInterval(dropDown);
+				menuStatus = false;
+				navbar.style.display = "none";
+			}
+		}
+	}, 10);
+});
+/*********** Hamberger Menu Ends Here *********/

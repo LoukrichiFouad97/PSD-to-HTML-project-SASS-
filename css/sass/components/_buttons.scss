@@ -12,3 +12,26 @@
     background-color: $redColor;
   }
 }
+
+
+// Hamberger menu 
+.hamberger-menu {
+  padding: .5rem;
+  background-color: $redColor;
+  border: none;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 43px;
+  right: 16px;
+  cursor: pointer;
+  span {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+}

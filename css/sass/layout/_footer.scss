@@ -9,21 +9,33 @@
 		float: $float-left;
 	}
 	.gallery {
-		width: 50%;
+		@media #{$minSmall} {
+			width: 100%;
+		}
+		@media #{$minMedium} {
+			width: 50%;
+		}
 		.img-box {
 			overflow: hidden;
 			margin-bottom: 25px;
 			img {
-				float: $float-left;
+				display: block;
 				width: 150px;
-				padding: 2px;
 				border: 1px solid #333;
 				border-radius: 5px;
+				padding: 2px;
+				margin: auto;
+				@media #{$minSmall} {
+					float: $float-left;
+				}
 			}
 			.img-text {
-				margin: 0 15px;
-				float: $float-left;
-				width: calc(100% - 180px);
+				text-align: center;
+				@media #{$minSmall} {
+					margin: 0 15px;
+					float: $float-left;
+					width: calc(100% - 180px);
+				}
 				h4 {
 					margin: 20px 0 10px;
 					color: $redColor;
@@ -37,47 +49,66 @@
 	}
 
 	.info {
-		width: 25%;
-    color: #555;
-    line-height: 1.8;
-    span {
-      color: $redColor;
-    }
+		color: #555;
+		line-height: 1.8;
+		@media #{$minSmall} {
+			width: 50%;
+		}
+		@media #{$minMedium} {
+			width: 25%;
+		}
+		span {
+			color: $redColor;
+		}
 		h4 {
 			margin-top: 20px;
 		}
-  }
-  
-	.contact {
-    width: 25%;
-    input[type= text],
-    input[type= email],
-    textarea {
-      padding: 10px;
-      border: 1px solid #c3c3c3;
-      width: 100%;
-      margin-bottom: 10px;
-      border-radius: 10px;
-    }
-    textarea {
-      height: 140px;
-    }
 	}
+
+	.contact {
+		@media #{$minSmall} {
+			width: 50%;
+		}
+		@media #{$minMedium} {
+			width: 25%;
+		}
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			padding: 10px;
+			border: 1px solid #c3c3c3;
+			width: 100%;
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
+		textarea {
+			height: 140px;
+		}
+	}
+
 	.section__title {
 		color: #555;
 		margin: 20px 0;
-  }
-  .copyright {
-    border-top: 2px solid #c2c2c2;
-    padding: 20px;
-    .text,
-    .author {
-      width: 50%;
-      float: $float-left;
-      color: #555;
-    }
-    .author {
-      text-align: $text-right;
-    }
-  }
+	}
+	.copyright {
+		border-top: 2px solid #c2c2c2;
+		margin-top: 20px;
+		padding: 5px 0;
+		.text,
+		.author {
+			color: #555;
+			display: block;
+			margin-top: 10px;
+			@media #{$minMedium} {
+				padding: 20px;
+				float: $float-left;
+				width: 50%;
+			}
+		}
+		.author {
+			@media #{$minMedium} {
+				text-align: $text-right;
+			}
+		}
+	}
 }

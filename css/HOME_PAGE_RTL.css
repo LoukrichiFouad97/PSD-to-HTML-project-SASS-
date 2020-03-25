@@ -1,1 +1,55 @@
-/* No CSS */
+@media (min-width: 992px) {
+  .main-header .logo {
+    float: right;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .main-header .navbar {
+    float: right;
+  }
+}
+.main-header .navbar li {
+  float: right;
+}
+@media (min-width: 992px) {
+  .main-header .services .service {
+    float: right;
+  }
+}
+@media (min-width: 768px) {
+  .main-header .players .player {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  .main-header .lorem-ipsum .lorem-box {
+    float: right;
+  }
+}
+.main-header .footer .gallery,
+.main-header .footer .info,
+.main-header .footer .contact {
+  float: right;
+}
+@media (min-width: 768px) {
+  .main-header .footer .img-box img {
+    float: right;
+  }
+}
+@media (min-width: 768px) {
+  .main-header .footer .img-box .img-text {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  .main-header .copyright .text,
+.main-header .copyright .author {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  .main-header .copyright .author {
+    text-align: right;
+  }
+}
